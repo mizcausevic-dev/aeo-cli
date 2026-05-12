@@ -1,0 +1,23 @@
+[package]
+name = "aeo-cli"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+description = "Command-line tool for the AEO Protocol v0.1 — validate, fetch, and inspect AEO declaration documents."
+license = "AGPL-3.0"
+repository = "https://github.com/mizcausevic-dev/aeo-cli"
+homepage = "https://github.com/mizcausevic-dev/aeo-cli"
+readme = "README.md"
+keywords = ["aeo", "well-known", "cli", "validator", "llm"]
+categories = ["command-line-utilities"]
+
+[[bin]]
+name = "aeo"
+path = "src/main.rs"
+
+[dependencies]
+aeo-protocol = { git = "https://github.com/mizcausevic-dev/aeo-sdk-rust.git", rev = "31519ef7330d36cf5cbf05079d7f2f10b313dbbe", default-features = false, features = ["client"] }
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+colored = "2"
+serde_json = "1"
