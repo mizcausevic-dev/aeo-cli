@@ -16,7 +16,7 @@ name = "aeo"
 path = "src/main.rs"
 
 [dependencies]
-aeo-protocol = { git = "https://github.com/mizcausevic-dev/aeo-sdk-rust.git", rev = "31519ef7330d36cf5cbf05079d7f2f10b313dbbe", default-features = false, features = ["client"] }
+aeo-protocol = { version = "0.1", default-features = false, features = ["client"] }
 anyhow = "1"
 clap = { version = "4", features = ["derive"] }
 colored = "2"
